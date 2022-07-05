@@ -1,0 +1,45 @@
+public class Employee  /*Access modifier is public which means can be accessed from any class*/
+{
+    String name;
+    String dept;
+    char sec;
+    int empid;
+    double salary;
+    static String comp="TCS";/*since the company field is common to any number of employees created,better to go with static so memory get allocated once for this field everytime new object created*/
+    Employee(String name,String dept,char sec,int id,double salary) /*created parameterized constructor*/
+    {
+        this.name=name; /*this keyword used to distinguish between instance variable and local variable when both has the same variable name*/
+        this.dept=dept;
+        this.sec=sec;
+        empid=id;    /*this keyword is not required here as both the names are different*/
+        this.salary=salary;
+    }
+void display() /*Default modifier where access is within the package*/
+{
+        System.out.println(name +" "+dept+" "+sec+" "+empid+" "+salary+" "+comp);
+}
+static void change() /*static method to change the value of static variable*/
+{
+        comp="Intel";
+
+}
+
+}
+
+public class Company {
+    public static void main(String args[])
+    {
+        Employee emp1=new Employee("Haritha","IT",'A',101,59000.23);
+        Employee emp2=new Employee("Arjun","Analytics",'A',102,57000.89);
+        Employee emp3=new Employee("Ajith","IT",'A',103,54000.67);
+        emp1.display();
+        emp2.display();
+        emp3.display();
+        emp1.change();
+        emp1.display();
+
+        System.out.println("the highest of two is" + Math.max(emp2.salary,emp3.salary));
+
+
+    }
+}

@@ -1,0 +1,72 @@
+/*Method overloading ,method overriding -two types of polymorphism and Inheritance concept*/
+public class Oops
+{
+    int a=2;
+    int b=8;
+    public void salary(int bas,int var )
+    {
+        int sal=bas+var;
+        System.out.println(sal);
+    }
+    public void salary(int bas,int var,int fix)
+    {
+        int sal=bas+var+fix;
+        System.out.println(sal);
+    }
+    public void salary(double bas)
+    {
+        double sal=bas;
+        System.out.println(sal);
+    }
+    public void thought(){
+        System.out.println("Grateful for everything");
+    }
+    Oops(int a,int b)
+    {
+        this.a=a;
+        this.b=b;
+    }
+    public void prize_1()
+    {
+        a +=a;
+        b +=b;
+        int d=Math.max(a,b);
+System.out.println("Winner has got:"+Math.max(a,b));
+
+    }
+
+}
+
+public class Child extends Oops
+{
+    int d;
+
+    public void thought()
+    {
+        System.out.println("Grateful and Thankful for everything");/*This child method being overriden in output*/
+    }
+    Child(int a,int b)
+    {
+        super(a,b);
+
+
+    }
+    public void prize()
+    {
+       System.out.println("Congragulations to winner");
+
+    }
+}
+public class Oopsmain {
+    public static void main(String args[])
+    {
+        Oops obj=new Oops(2,4);
+        obj.salary(100,20000,30);/*method overloading can be seen*/
+        Child ob=new Child(2,4);
+        obj.thought();
+        ob.thought();
+        ob.prize_1();
+        ob.prize();/*Inheriting parent method also using child with object*/
+
+    }
+}

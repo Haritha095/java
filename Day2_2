@@ -1,0 +1,47 @@
+class Operators {
+int a=280;
+int b=320;
+int c=400;
+int cost;
+void ter(){
+cost=((a>b)?(a>c)?a:c:(b>c)?b:c);
+System.out.println("The Costliest of the 3 product is:"+cost);
+}
+  void bitwise()
+  {
+      System.out.println("Bitwise AND:" + (a&b));
+      System.out.println("Bitwise OR:" + (a|b));
+      System.out.println("Bitwise XOR:" + (a^b));
+
+      System.out.println("Bitwise NOT:" + (~a));
+  }
+void shift()
+{
+    System.out.println("Shift operators");
+    int ans=a <<2;
+    System.out.println(ans);
+    System.out.println(a>>>2);
+    int x=-280;
+    System.out.println(x>>>2);
+    System.out.println("Unary operator");
+    ++a;
+    System.out.println(a);
+    System.out.println(a++);
+    System.out.println(a);
+    System.out.println(--a);
+    System.out.println(a);
+    System.out.println(a--);
+    System.out.println(a);
+    System.out.println("Relational Operator");
+    System.out.println("a>b"+"\t" +(a>b));
+    System.out.println("a!=b"+"\t"+(a!=b));
+}
+
+public class Mainop {
+    public static void main(String args[]){
+        Operators op=new Operators();
+        op.ter();
+        op.bitwise();
+op.shift();
+    }
+}

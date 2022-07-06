@@ -1,0 +1,42 @@
+public class Day2
+{
+int marks;
+String name;
+int rollno;
+Day2(String name,int rollno,int marks,String sub )
+{
+    this.name=name;
+    this.rollno=rollno;
+   this.marks=marks;
+}
+public void result()
+{
+    if(marks>50){
+        System.out.println("Pass");
+
+    }
+    else{
+        System.out.println("Fail");
+
+    }
+}}
+
+import java.util.Scanner;
+public class Main extends Day2
+{
+String res;
+    Main(String name, int rollno, int marks, String sub) {
+        super(name, rollno, marks, sub);
+       }
+    public static void main(String args[]){
+    Scanner obj=new Scanner(System.in);
+System.out.println("Enter student Details");
+   String name=obj.nextLine();
+    int rollno=obj.nextInt();
+    int marks=obj.nextInt();
+    String sub=obj.nextLine();
+System.out.println("Find the details as follow" + "\nName:"+"\t"+name+"\nRoll Number:"+"\t"+rollno+"\nMark:"+"\t" +marks);
+        Day2 d=new Day2("haritha",101,87,"English");
+        System.out.println("Based on the data the student result:");
+        d.result();
+    }}

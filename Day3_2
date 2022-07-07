@@ -1,0 +1,50 @@
+import java.util.Scanner;
+public class Loops {
+    static int a=100;
+    static int b=40;
+
+    public static void oper()
+
+        {Scanner obj=new Scanner(System.in);
+            System.out.println("Enter operation");
+            String m=obj.nextLine();
+            switch (m)
+            {
+                case "ADD":
+                    System.out.println(a+b);
+                    break;
+                case "SUBTRACT":
+                    System.out.println(a-b);
+                    break;
+                case "MULTIPLY":
+                    System.out.println(a*b);
+                    break;
+                case "DIVIDE":
+                    System.out.println(a/b);
+                    break;
+                default:
+                    System.out.println("Type error");
+
+            }}
+public static void  number()
+{
+    for(int i=0;i<=10;i++){
+        if(i %2==0)
+        {
+            System.out.println("This is even number: ");
+            System.out.println(i);
+        }
+else{
+            System.out.println("odd number: ");
+            System.out.println(i);
+
+    }
+}}
+
+    public static void main(String args[])
+    {
+
+        number();
+        oper();
+    }
+}

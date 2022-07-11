@@ -1,0 +1,111 @@
+import java.util.Scanner;
+//Factorial
+
+public class Practice {
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+         System.out.println("Enter a number");
+        int num=sc.nextInt();
+
+int a=1;
+
+for(int i=1;i<=num;i++)
+{
+    a=a*i;
+
+        }
+System.out.println(a);
+        }
+    }
+
+public class Concepts {
+    public void typecast()
+    {
+        short i=90;
+        int q=i;//automatic conversion-int
+        long l=i;//automatic conversion to long
+        float f=i;//automatic conversion to float
+        System.out.println("Int value"+q);
+        System.out.println("Long value"+l);
+        System.out.println("Float value"+f);
+        double d=400.04;
+        long h=(long) d;//explicit type casting-fractional part lost
+        int j=(int) d;//explicit type casting
+        System.out.println("double value"+d);
+        System.out.println("long value"+h);
+        System.out.println("Int value"+j);
+int p=257;
+double g=290.9;
+byte b=(byte) p;//int to byte
+System.out.println("int "+p+" byte "+b);
+ b=(byte) g;//double to byte
+ System.out.println("Double :"+g+"Byte : "+b);
+
+
+    }
+   public void stringfn()
+   {
+       String s="hari";//creating string using string literal
+       String h=new String("All is well");//creating using new keyword
+       System.out.println(s);
+       System.out.println(h);
+
+       byte[] b_arr={71,101,109,107,115};
+       String s_byte=new String(b_arr);//character set decoding
+       System.out.println(s_byte);
+       String s_1=new String(b_arr,2,3);//start index,length mentioned taking from the starting point
+       System.out.println(s_1);
+       char ch[]={'h','a','r','i'};//allocates a new string from the given character array
+       String s_3=new String(ch);
+       System.out.println(s_3);
+       char ch_1[]={'m','i','t','t','u'};
+       String s_4=new String(ch_1,1,2);//allocates a new string from the character array but choose count character from the start_index
+        System.out.println(s_4);
+       StringBuffer s_buffer = new StringBuffer("malu");
+       String s_5 = new String(s_buffer);//allocates a new string from the string in StringBuffer and the same applies with StringBuilder
+       System.out.println(s_5);
+
+   }
+   public void stringmet()
+   {
+       System.out.println("NaturewillGuideyou".length());
+       String s5="Nature will guide you";//the above and below returns the number of character in the string that is length of the string
+       System.out.println(s5.length());
+       System.out.println(s5.charAt(7));//returns character at ith position 7th position mentioned here
+       System.out.println(s5.substring(4));//substring from 4th position to end
+       System.out.println(s5.substring(3,9));//substring from 3rd index to 9th index
+       String s1="hari";
+       String s2="arjun";
+       String s3=s1.concat(s2);//concatination two strings
+       String s4=s1+s2;
+       System.out.println(s3);
+       System.out.println(s4);
+       int output = s5.indexOf("will");//to find the index from where the mentioned index starts
+       System.out.println(output);
+       String s8 = "Learning helps you";//to find the index from where the mentioned index starts
+       int o1=s8.indexOf("ing",4);//return index of specified string starting from the speicfied index returns first occurence
+       System.out.println(o1);
+       int o2=s8.lastIndexOf('e');
+       System.out.println(o2);//returns last occurence index of the speicifed char
+       Boolean out="hari".equalsIgnoreCase("hari");//to check two strings are same ignore case
+       System.out.println(out);
+       System.out.println(s8.toLowerCase());//to make it to lower case letters
+       System.out.println(s8.toUpperCase());//to make it to upper case letters
+       String c="  mittu ";
+       System.out.println(c.trim());//removes whitespace at both the end,doesn't consider the whitespace in the middle
+       System.out.println(c);
+       System.out.println(c.replace('t','k'));//returns by replacing with the new one mentioned
+
+   }
+    public static void main(String args[])
+    {
+        Concepts obj=new Concepts();
+      //  obj.typecast();
+        Concepts oj=new Concepts();
+       // oj.stringfn();
+oj.stringmet();
+
+    }
+}
+

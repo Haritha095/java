@@ -1,8 +1,6 @@
 import java.util.*;
 public class Collections {
-
-
-    public void array1() {
+ public void array1() {
         int arr[][] = {{1, 2, 3}, {2, 4, 5}, {4, 4, 5}};
         // int[][] arr=new int[4][8];
         for (int k = 0; k< 3; k++) {
@@ -12,7 +10,7 @@ public class Collections {
             System.out.println();
         }
     }
-    public void array2(){
+ public void array2(){
         int arr[]={1,2,3,3,4,7};
         for(int i=0;i<arr.length;i++)
         {
@@ -20,7 +18,7 @@ public class Collections {
         }
         System.out.println("4th index vale:" +arr[4]);
     }
-public void arraylist()
+public void arrayList()
 {
     ArrayList<String> lst =new ArrayList<String>();
     lst.add("hari");
@@ -32,7 +30,7 @@ public void arraylist()
         System.out.println(itr.next());//printing through the itr and moving
     }
 }
-public void arraylist2()
+public void arrayList2()
 {
     ArrayList<String> lst1=new ArrayList<String>();
     lst1.add("bubbles");
@@ -47,15 +45,13 @@ public void arraylist2()
 }
 
     public static void main(String args[]) {
-
-
 Collections obj=new Collections();
 obj.array1();
 Collections obj1=new Collections();
 obj1.array2();
 Collections obj3=new Collections();
-obj3.arraylist();
+obj3.arrayList();
 Collections obj4=new Collections();
-obj4.arraylist2();
+obj4.arrayList2();
 
     }}

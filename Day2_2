@@ -3,22 +3,22 @@ int a=280;
 int b=320;
 int c=400;
 int cost;
-void ter(){
-cost=((a>b)?(a>c)?a:c:(b>c)?b:c);/*Terenary operator where check for condition and if 1st is true goes with that,else 2nd one in that manner*/
+void ternary(){
+cost=((a>b)?(a>c)?a:c:(b>c)?b:c);
 System.out.println("The Costliest of the 3 product is:"+cost);
 }
   void bitwise()
   {
-      System.out.println("Bitwise AND:" + (a&b));/*Bitwise function*/
+      System.out.println("Bitwise AND:" + (a&b));
       System.out.println("Bitwise OR:" + (a|b));
-      System.out.println("Bitwise XOR:" + (a^b));/*bitwise where both condition true false else true*/
+      System.out.println("Bitwise XOR:" + (a^b));
 
-      System.out.println("Bitwise NOT:" + (~a));/*1s complement*/
+      System.out.println("Bitwise NOT:" + (~a));
   }
 void shift()
 {
     System.out.println("Shift operators");
-    int ans=a <<2;/*shifting two bits to left*/
+    int ans=a <<2;
     System.out.println(ans);
     System.out.println(a>>>2);
     int x=-280;
@@ -26,9 +26,9 @@ void shift()
     System.out.println("Unary operator");
     ++a;
     System.out.println(a);
-    System.out.println(a++);/*post increment*/
+    System.out.println(a++);
     System.out.println(a);
-    System.out.println(--a);/*pre decrement*/
+    System.out.println(--a);
     System.out.println(a);
     System.out.println(a--);
     System.out.println(a);
@@ -36,12 +36,12 @@ void shift()
     System.out.println("a>b"+"\t" +(a>b));
     System.out.println("a!=b"+"\t"+(a!=b));
 }
+  }
 
-public class Mainop {
+public class Operation {
     public static void main(String args[]){
         Operators op=new Operators();
-        op.ter();
+        op.ternary();
         op.bitwise();
-op.shift();
+        op.shift();
     }
-}

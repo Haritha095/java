@@ -1,26 +1,22 @@
 import java.util.Scanner;
-//Factorial
-
-public class Practice {
-    public static void main(String args[])
-    {
-        Scanner sc=new Scanner(System.in);
-         System.out.println("Enter a number");
-        int num=sc.nextInt();
-
-int a=1;
-
-for(int i=1;i<=num;i++)
-{
-    a=a*i;
-
-        }
-System.out.println(a);
-        }
-    }
+public class Factorial {
+ //Factorial
+ public static void main(String args[])
+ {
+ Scanner sc=new Scanner(System.in);
+ System.out.println("Enter a number");
+ int num=sc.nextInt();
+ int term=1;
+ for(int i=1;i<=num;i++)
+ {
+ term=term*i;
+ }
+ System.out.println(term);
+ }
+ }
 
 public class Concepts {
-    public void typecast()
+    public void typeCast()
     {
         short i=90;
         int q=i;//automatic conversion-int
@@ -44,7 +40,7 @@ System.out.println("int "+p+" byte "+b);
 
 
     }
-   public void stringfn()
+   public void stringFunction()
    {
        String s="hari";//creating string using string literal
        String h=new String("All is well");//creating using new keyword
@@ -67,7 +63,7 @@ System.out.println("int "+p+" byte "+b);
        System.out.println(s_5);
 
    }
-   public void stringmet()
+   public void stringMethod()
    {
        System.out.println("NaturewillGuideyou".length());
        String s5="Nature will guide you";//the above and below returns the number of character in the string that is length of the string
@@ -101,11 +97,10 @@ System.out.println("int "+p+" byte "+b);
     public static void main(String args[])
     {
         Concepts obj=new Concepts();
-      //  obj.typecast();
+      //  obj.typeCast();
         Concepts oj=new Concepts();
-       // oj.stringfn();
-oj.stringmet();
+       // oj.stringFunction();
+oj.stringMethod();
 
     }
 }
-

@@ -1,6 +1,5 @@
 /*Method overloading ,method overriding -two types of polymorphism and Inheritance concept*/
-public class Oops
-{
+public class Payslip {
     int a=2;
     int b=8;
     public void salary(int bas,int var )
@@ -21,7 +20,7 @@ public class Oops
     public void thought(){
         System.out.println("Grateful for everything");
     }
-    Oops(int a,int b)
+    Payslip(int a, int b)
     {
         this.a=a;
         this.b=b;
@@ -57,10 +56,10 @@ public class Child extends Oops
 
     }
 }
-public class Oopsmain {
+public class Delivery {
     public static void main(String args[])
     {
-        Oops obj=new Oops(2,4);
+        Payslip obj=new Payslip(2,4);
         obj.salary(100,20000,30);/*method overloading can be seen*/
         Child ob=new Child(2,4);
         obj.thought();

@@ -1,6 +1,6 @@
 import java.util.*;
-public class Collections2 {
-    public void hashmap1()
+class Collection {
+    public void hashMap()
     {
         HashMap<Integer,String> m1=new HashMap<Integer,String>();//creating hashmap
         m1.put(2,"student");
@@ -34,7 +34,7 @@ public class Collections2 {
 
 
     }
-    public void hashset()
+    public void hashSet()
     {
         HashSet<String> hs=new HashSet<String>();//creating hashset
         hs.add("Hari");
@@ -51,9 +51,9 @@ public class Collections2 {
     }
     public static void main(String args[])
     {
-        Collections2 o1=new Collections2();
-        o1.hashmap1();
-        Collections2 o2=new Collections2();
-        o2.hashset();
+        Collection o1=new Collection();
+        o1.hashMap();
+        Collection o2=new Collection();
+        o2.hashSet();
     }
 }

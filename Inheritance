@@ -1,0 +1,54 @@
+public class Cars /*Parent class*/
+{
+    String carname, brand;
+    int carid;
+    double price;
+    static int id = 1;
+    String color;
+    int extracharge;
+
+    Cars(String carname, String brand, String color, double price, int extracharge) /*parameterized constructor*/
+    {
+        this.carname = carname;
+        this.brand = brand;
+        this.color = color;
+        this.price = price;
+        this.extracharge = extracharge;
+        carid = id++;
+
+    }
+
+    protected void finalCostPrice(int price, int extracharge) /*protected method can be accessed by class and subclass and through inheritance*/
+    {
+        double gst = 85000;
+        double sum = price + extracharge + gst;
+        int sumnew = (int) sum;
+        System.out.println("Final cost for this brandnew Car: " + sum);
+        System.out.println("You have to just pay: "+sumnew);
+
+    }
+}
+
+public class Vehicle extends Cars /*child class*/
+{
+
+    Vehicle(String carname, String brand, String color, double price, int extracharge)
+    {
+        super(carname, brand, color, price, extracharge); /*super keyword used  for parent class*/
+    }
+    protected void finalCostPrice(int price) /*same method name as in parent class only parameters change for method overloading*/
+    {
+        double sum=price+85000;
+        int sumnew=(int)sum;
+        System.out.println("Final amount you have to pay"+sumnew);
+
+    }
+    public static void main(String args[])
+    {
+        Vehicle obj=new Vehicle("Sonet","Kia","Red",1300000,7000);
+        obj.finalCostPrice(1300000,7000); /*method overloading happens based on parameters can be made to method overriding with the same method*/
+
+    }
+}
+
+
